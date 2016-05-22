@@ -1,9 +1,4 @@
-/*  "PATRICK TRAVIS"
- */
-/* This program is designed to scan for the sales figures of 5 stores
-   Once the scanner has completed. The data is then passed into a method
-   that calls for an array function which is included in the parameters and
-   as method
+
 */
 package salesjava;
 
