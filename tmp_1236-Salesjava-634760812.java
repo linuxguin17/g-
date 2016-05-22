@@ -6,7 +6,7 @@ import java.util.*;
 
 /**
  *
- * @author meep85
+ * 
  */
 public class Salesjava {
 
