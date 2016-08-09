@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+<title>BIDATALOGIC</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<!-- Include the jQuery library -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+<style type="text/css">
+	  #pageone{
+	  background-color:white;
+	  opacity:1.5;
+	  }
+	  #header{
+	  background-color:blue;
+	  color:white;
+	  font-weight:100;
+	  }
+	  #footer{
+	  background-color:black;
+	  font-weight:100;
+	  color:white;
+	  opacity:1.5;
+	  }
+</style>
+  
+  <body>
+	<div data-role="page" id="pageone">
+	  <div data-role="header" id="header">
+		<h1>BMI</h1>
+		<section id="page1" data-role="page">
+		  <header data-role="header"><h1>Header</h1>
+			<div data-role="controlgroup" data-type="horizontal" data-inline="true">
+			</div>
+		  </header>
+		</section>
+	  </div>
+<script type="text/javascript">
+function d() {	
+var weight = document.getElementById("weight").value;
+	var converter = 12;	
+var height = document.getElementById("height").value;	
+height = height * converter;	
+var bmi = ((weight / (height * height) * 703));
+	if (bmi < 16)	{		
+alert("Severely Underweight");		
+document.write("This index indicates a risk of malnutrition");		
+document.write("and is associated with low indices on cardiac measures");
+	}	
+else if (bmi > 17 && bmi < 25)	
+{		
+alert("Normal Weight");		
+document.write("This index falls with in healthy indices");		
+document.write("and holds leverage against certain cancers, diabetes & high blood pressures");	
+}	
+else if (bmi > 25 && bmi < 30)	
+{		
+alert("Overweight");		
+document.write("This index is associated with high blood pressures\n");		
+document.write(" and is the indicant of many health issues of cardiac indices as well as\n");		
+document.write("diabetes,hypertension and is associated with stroke indices\n");	
+}	
+else if (bmi > 30)	{		
+alert("Obese Consult a doctor");	
+}
+}d();
+</script>
+	  <div data-role="main" class="ui-content">
+		<p>BMI BODY MASS INDEX CALCULATOR</p>
+		<form method="post" action="result.php">
+		<div data-role="fieldcontain">
+		  <input type="text" id="height" placeholder="HEIGHT(6ft = 6.0)" value="" /> 
+		  <br>
+		  <input type="text" id="weight" placeholder="WEIGHT" value="" /> 
+		  <br>
+		  <a href="#" data-role="button" data-inline="true" onclick="d()" data-mini="true" data-icon="grid" data-theme="a">BMI</a>
+		</form>
+	  </div>
+	  </div>
+	  <div data-role="footer" id="footer">
+		<h1>BIDATA FIT SERIES</h1>
+	  </div>
+	</div> 
+  </body>
+</html>
