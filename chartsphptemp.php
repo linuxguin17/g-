@@ -30,7 +30,7 @@ $foo4 = $_POST["foo3"];
 $foo5 = $_POST["foo4"];
 $foo6 = $_POST["foo5"];
 $foo7  = $_POST["foo6"];
-$foo8  = "<table style=width:100%>
+$chart  = "<table style=width:100%>
   <tr>
     <th>foo</th>
     <th>foo1</th>
