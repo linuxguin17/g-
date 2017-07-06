@@ -1,0 +1,64 @@
+import java.util.*;
+import java.util.Date;
+public class Main
+{
+	public static void bankfunction(double deposit)
+	{
+
+		Scanner input = new Scanner(System.in);
+		double savings = 2239.00;
+		double balance = 2004.00;
+		double currentbalance = savings + balance;
+		double balanceafterd = deposit + currentbalance;
+		System.out.println("Enter your account number");
+		System.out.println("WELCOME YOUR ACCOUNT INFO");
+		System.out.println(currentbalance);
+		System.out.println(savings);
+		System.out.println(balance);
+		System.out.println(balanceafterd);
+	}
+
+	public static void date()
+	{
+
+		Date date = new Date();
+
+		System.out.printf("%s %tB %<te, %<tY", "Date:", date, "\n");
+	}
+	public static void balances()
+	{
+		double savings = 2239.00;
+		double balance = 2004.00;
+		double currentbalance = savings + balance;
+		System.out.println("$" + currentbalance);
+	}
+	public static void main(String[] args)
+	{
+		date();
+		balances();
+		System.out.println("Welcome To ACME BANK");
+		System.out.println("Enter Your Account Number");
+		Scanner input = new Scanner(System.in);
+
+		double response = input.nextDouble();
+		System.out.println("Thank you!!");
+		System.out.println("Would you like to make a deposit");
+		System.out.println("Or Check your bank account statement ?");
+		System.out.println("Enter 1 For Deposit and Balance");
+		System.out.println("Enter 2 for Balance");
+		int response2 = input.nextInt();
+		if (response2 == 1)
+		{
+			date();
+			System.out.println("How Much would like to deposit");
+			double d = input.nextDouble();
+			bankfunction(d);
+		}
+		if (response2 == 2)
+		{
+			date();
+			balances();
+		}
+
+	}
+}
